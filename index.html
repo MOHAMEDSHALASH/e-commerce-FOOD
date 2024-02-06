@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Food</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <!-- setting -->
+    <div class="setting">
+        <div class="setting-btn"><i class="fa-solid fa-gear"></i></div>
+        <section><p>COLORS : </p><input type="color" id="color"></section>
+        <section><p>RESET : </p><p class="reset" id="reset"><i class="fa-solid fa-rotate"></i></p></section>
+    </div>
+    <!-- internet check -->
+    <div class="check-internet">
+        <h3>OffLine Now ....</h3>
+        <p>check your internet and try again</p>
+    </div>
+    <!-- loading -->
+    <div class="loading" id="loading"><img src="images/loader.gif" alt=""></div>
+    <!-- CART PAGE -->
+    <div class="cart-page">
+        <div id="close-cart" class="close-cart"><i class="fa-solid fa-x"></i></div>
+        <div class="null" id="null">No Items Added</div>
+        <div class="cart" id="cart-items"></div>
+        <div class="total">
+            <h3>Total : <span id="totalData">700</span> $</h3>
+            <button class="buy">Buy ... </button>
+        </div>
+    </div>
+    <!-- FAVOURITE PAGE -->
+    <div class="favourite" id="favourite">
+        <div id="close-fav" class="close-fav"><i class="fa-solid fa-x"></i></div>
+        <div class="title"><h3>Our <span>Favourite</span></h3></div>
+        <div class="delete-fav-all" id="delete-fav-all"></div>
+        <div class="null" id="null2">No Items Added</div>
+        <div class="fav-items" id="fav-items">
+        </div>
+    </div>
+    <!-- header  -->
+    <header>
+        <div class="bar-icon"><i class="fa-solid fa-bars-staggered"></i></div>
+        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="items-linkes">
+            <ul>
+                <a id="a1" class="active" href="#"><li >Home</li></a>
+                <a id="a2"  href="#dishes"><li>Dishes</li></a>
+                <a id="a3"  href="#about"><li>About</li></a>
+                <a id="a4"  href="#menu"><li>Menu</li></a>
+                <a id="a5"  href="#review"><li>Review</li></a>
+                <a id="a6"  href="#contact"><li>Contact Us</li></a>
+            </ul>
+        </div>
+        <div class="items-online">
+            <div class="search" id="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="fav" id="fav">
+                <p class="count-fav" id="count-fav">1</p>
+                <i class="fa-solid fa-heart"></i></div>
+            <div class="cart" id="cart">
+                <p class="count-cart" id="count-cart"></p>
+                <span class="material-symbols-outlined">shopping_bag</span></div>
+        </div>
+    </header>
+    <!-- bar -->
+    <div class="bar" id="bar">
+        <ul>
+            <a href="#"><li >Home</li></a>
+            <a href="#dishes"><li>Dishes</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#menu"><li>Menu</li></a>
+            <a href="#review"><li>Review</li></a>
+            <a href="#contact"><li>Contact Us</li></a>
+        </ul>
+    </div>
+    <!-- main page slider -->
+    <div class="boot">
+        <main id="strap">
+            <div style="max-width:40.3cm;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <div class="bg1">
+                    <div class="slide">
+                        <h3>Our Special Dish</h3>
+                        <h1>Spicy Noodles</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing os non eaque nihil inventore fugiat?</p>
+                        <button type="submit">Order Now</button>
+                    </div>
+                    <div class="logoslide"><img src="images/home-img-1.png" alt="" srcset=""></div>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg2">
+                            <div class="slide">
+                                <h3>Our Special Dish</h3>
+                                <h1>Spicy Noodles</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing os non eaque nihil inventore fugiat?</p>
+                                <button type="submit">Order Now</button>
+                            </div>
+                            <div class="logoslide"><img src="images/home-img-2.png" alt="" srcset=""></div>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg3">
+                            <div class="slide">
+                                <h3>Our Special Dish</h3>
+                                <h1>Spicy Noodles</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing os non eaque nihil inventore fugiat?</p>
+                                <button type="submit">Order Now</button>
+                            </div>
+                            <div class="logoslide"><img src="images/home-img-3.png" alt="" srcset=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- dishes page -->
+    <div class="dishes" id="dishes">
+        <div class="title"><h3>Our <span>Dishes</span></h3></div>
+        <div class="dishes-box boxes">
+            <section>
+                <div class="to-fav">&#128154</div>
+                <div class="img"><img src="images/dish-1.png" alt="" srcset=""></div>
+                <h3 id="title">Burger</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="priceANDbtn">
+                    <h3 class="price" data-price="40"><span>40</span> $</h3>
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <button type="submit" id="btn-add-item">Add To Cart</button>
+            </section>
+            <section>
+                <div class="to-fav">&#128154</div>
+                <div class="img"><img src="images/dish-2.png" alt="" srcset=""></div>
+                <h3 id="title">Tasty Food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="priceANDbtn">
+                    <h3 class="price" data-price="70"><span>70</span> $</h3>
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <button type="submit" id="btn-add-item">Add To Cart</button>
+            </section>
+            <section>
+                <div class="to-fav">&#128154</div>
+                <div class="img"><img src="images/dish-3.png" alt="" srcset=""></div>
+                <h3 id="title">Checkien</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="priceANDbtn">
+                    <h3 class="price" data-price="20"><span>20</span> $</h3>
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <button type="submit" id="btn-add-item">Add To Cart</button>
+            </section>
+            <section>
+                <div class="to-fav">&#128154</div>
+                <div class="img"><img src="images/dish-4.png" alt="" srcset=""></div>
+                <h3 id="title">Pizza</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="priceANDbtn">
+                    <h3 class="price" data-price="50"><span>50</span> $</h3>
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <button type="submit" id="btn-add-item">Add To Cart</button>
+            </section>
+            <section>
+                <div class="to-fav">&#128154</div>
+                <div class="img"><img src="images/dish-5.png" alt="" srcset=""></div>
+                <h3 id="title">Checolate Kake</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="priceANDbtn">
+                    <h3 class="price" data-price="10"><span>10</span> $</h3>
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <button type="submit" id="btn-add-item">Add To Cart</button>
+            </section>
+        </div>
+    </div>
+    <!-- about page -->
+    <div class="about" id="about">
+        <div class="title"><h3>About <span>US</span></h3>
+        <h1>Why Chosse Us !</h1>
+        </div>
+        <div class="about-box">
+            <div class="left"><img src="images/about-img.png" alt=""></div>
+            <div class="right">
+                <h1>Best Food In The Country </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ea, aspernatur dolores magnam necessitatibus veritatis iure! Error maxime, dolor aperiam molestias,
+                    cumque quisquam odit officiis quibusdam rem commodi mollitia quasi.</p>
+                <div class="items">
+                    <section><div><i class="fa-solid fa-truck-fast"></i></div>
+                        <h3>Free Delivery</h3>
+                    </section>
+                    <section><div><i class="fa-solid fa-dollar-sign"></i></div>
+                        <h3>Easy Payment</h3>
+                    </section>
+                    <section><div><i class="fa-solid fa-headphones-simple"></i></div>
+                        <h3>24 / 7 Service</h3>
+                    </section>
+                </div>
+                <button id="learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <!-- menu page -->
+    <div class="menu"id="menu" >
+        <div class="title"><h3>Menu <span>.....</span></h3></div>
+        <div class="continar-menu" >
+        <div class="left">
+            <ul>
+                <a href="#m1"><li id="mm1" class="active-menu">All day breakfast</li></a>
+                <a href="#m2"><li id="mm2" >Sandwiches</li></a>
+                <a href="#m3"><li id="mm3" >Burgers & Wraps</li></a>
+                <a href="#"><li>Fresh Desserts</li></a>
+                <a href="#"><li>Noodle Bowls</li></a>
+                <a href="#"><li>Pastas & Steaks</li></a>
+                <a href="#"><li>Rice Bowls</li></a>
+                <a href="#"><li>Biriyanis & Thalis</li></a>
+                <a href="#"><li>Keto Specials</li></a>
+                <a href="#"><li>Fit N Fab</li></a>
+                <a href="#"><li>Sides & Beverages</li></a>
+            </ul>
+        </div>
+        <div class="right">
+            <div id="m1" class="title-menu">All day breakfast</div>
+            <div class="dishes-box boxes boxes-menu">
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b1.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="20"><span>20</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b2.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="15"><span>15</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b3.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="14"><span>14</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b4.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="22"><span>22</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b5.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="12"><span>12</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b6.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="17"><span>17</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b7.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="15"><span>15</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/b8.jpg" alt="" srcset="">
+                    <h3 id="title">break-fast</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="20"><span>20</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+            </div>
+            <!-- -------------------------------------------------------------------- -->
+            <div id="m2" class="title-menu">SANDWICHES</div>
+            <div class="dishes-box boxes boxes-menu">
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s1.jpeg" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="10"><span>10</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s2.jpg" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="11"><span>11</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s3.jpg" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="10"><span>10</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s4.JPG" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="12"><span>12</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s5.JPG" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="14"><span>14</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s6.JPG" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="16"><span>16</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s7.JPG" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="10.5"><span>10.5</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s8.JPG" alt="" srcset="">
+                    <h3 id="title">Sandwiches</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="13"><span>13</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+            </div>
+            <!-- ------------------------------------------------------------------ -->
+            <div id="m3" class="title-menu">BURGERS & WRAPS</div>
+            <div class="dishes-box boxes boxes-menu">
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/o1.JPG" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/s1.jpeg" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/o3.jpg" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/o4.JPG" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/o5.JPG" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+                <section>
+                    <div class="to-fav">&#128154</div>
+                    <img src="images/o6.jpg" alt="" srcset="">
+                    <h3 id="title">Burger</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <div class="priceANDbtn">
+                        <h3 class="price" data-price="40"><span>40</span> $</h3>
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit" id="btn-add-item">Add To Cart</button>
+                </section>
+            </div>
+            <!-- -------------------------------------------------------------------- -->
+        </div>
+    </div>
+    </div>
+    <!-- review page -->
+    <div class="review" id="review">
+        <div class="title"><h3>Customers's <span>Review</span></h3></div>
+        <h1>What they say ....</h1>
+        <div class="review-slide">
+            <nav>
+                <div class="name">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 &#127775 &#127775</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+                </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-3.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-4.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 &#127775 &#127775</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+                </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-3.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-4.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+            <nav>
+                <div class="name">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="stars">
+                        <h3>Mohamed shalash</h3>
+                        <p>&#127775 &#127775 </p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tempora saepe odio qui iure a corporis quis facere repellat culpa earum.</p>
+            </nav>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="title"><h3>Contact <span>us</span></h3></div>
+        <div class="form-location">
+            <form action="#">
+                <h3>Leave Message</h3>
+                <input id="name" type="text" placeholder="Your Name" required><br>
+                <input type="email" placeholder="Your Email" required><br>
+                <textarea cols="30" rows="10" placeholder="Your Message ..." required></textarea><br>
+                <button type="submit">Send </button>
+            </form>
+            <div class="location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54837.48332059288!2d31.066909974776163!3d30.793022286849403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c95daafcf035%3A0x7421820c5e8cae42!2z2LfZhti32KfYjCDYt9mG2LfYpyAo2YLYs9mFIDIp2Iwg2YXYsdmD2LIg2LfZhti32KfYjCDYp9mE2LrYsdio2YrYqQ!5e0!3m2!1sar!2seg!4v1661563702150!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="js/popper.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="main.js"></script>
+</html>
